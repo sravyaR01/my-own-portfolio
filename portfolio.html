@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobile").value;
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<h3>Thank you for contacting me, ${name}!</h3>
+                                  <p>Email: ${email}</p>
+                                  <p>Mobile No: ${mobile}</p>`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>R. Sravya</h1>
+            <p style="font-size:30px; margin-top: -10px;">Web Developer</p>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-about">About</a></li>
+                <li><a href="#profiles" class="nav-profiles">Profiles</a></li>
+                <li><a href="#projects" class="nav-projects">Projects</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is a showcase of my work and skills.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm R. Sravya, a student at RVR&JC with a passion for web development. I completed my schooling at Srichaitanya Techno School and my intermediate education at Sri Chaitanya College. I'm constantly learning and building projects that showcase my journey. Take a look at my work!</p>
+    </section>
+    
+    <section id="profiles">
+        <h2>Profiles</h2>
+        <p>Links to my professional and social profiles.</p>
+        <ul>
+            <li><a href="https://github.com/ " target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/feed/?trk=404_page" target="_blank">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/sravya01/" target="_blank">Leetcode</a></li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>I have built a portfolio project using HTML and CSS.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <div id="result"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 R. Sravya. All rights reserved.</p>
+    </footer>
+</body>
+</html>
